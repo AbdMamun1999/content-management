@@ -4,17 +4,19 @@ import loadTravelData from "../../redux/thunk/travel/fetchTravel";
 import ProductCard from "./ProductCard";
 
 const Products = () => {
-  const travels = useSelector(state=>state.travel.travels)
-  const dispatch = useDispatch()
+  const travels = useSelector((state) => state.travel.travels);
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    dispatch(loadTravelData())
+    dispatch(loadTravelData());
   }, []);
 
   return (
-    <div>
+    <div className="mb-10">
       {travels.map((ele) => (
         <ProductCard key={ele._id} product={ele} />
       ))}
+     
     </div>
   );
 };

@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import AddProduct from "../components/Dashboard/AddProduct";
+import AddTravel from "../components/Dashboard/AddTravel";
 import Dashboard from "../components/Dashboard/Dashboard";
 import ProductList from "../components/Dashboard/ProductList";
-import Products from "../components/main/Products";
+import TravelUpdate from "../components/Dashboard/TravelUpdate";
 import Home from "../pages/main/Home";
 import TravelDetails from "../pages/main/TravelDetails";
 
@@ -22,15 +22,19 @@ const routes = createBrowserRouter([
     children: [
       {
         path: "/dashboard",
-        element: <AddProduct />,
+        element: <AddTravel />,
       },
       {
         path: "addproduct",
-        element: <AddProduct />,
+        element: <AddTravel />,
       },
       {
         path: "productlist",
         element: <ProductList />,
+      },
+      {
+        path: "product-update/:listTravelId",
+        element: <TravelUpdate />,
       },
     ],
   },

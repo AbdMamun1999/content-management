@@ -17,12 +17,12 @@ const TravelDetails = () => {
   return (
     <div className="bg-[#f1f1f1]">
       <Navbar/>
-      <div className="sm:w-full md:w-[80%] lg:w-[50%] bg-white p-10 pt-0 mx-auto mt-10">
+      <div className="sm:w-full md:w-[80%] lg:w-[50%] bg-white p-5 px-10 mx-auto mt-10">
         <div>
-          <h1 className="text-center text-5xl font-semibold py-5 font-[montserrat]">{travel.place}</h1>
+          <h1 className="text-center text-5xl font-semibold  font-[montserrat]">{travel.place}</h1>
         </div>
         <div>
-          <img src={travel.img} alt="" className="mx-auto" width="100%"/>
+          <img src={travel.img} alt="" className="mx-auto my-5" width="100%"/>
         </div>
         <div>
           <p className="mt-5 text-[2016] font-[montserrat]">{travel.description}</p>
