@@ -1,9 +1,9 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-import createTravelData from "../../redux/thunk/travel/createTravel";
+import createContentData from "../../redux/thunk/content/createContent";
 
-const AddTravel = () => {
+const AddContent = () => {
   const {
     register,
     handleSubmit,
@@ -26,12 +26,12 @@ const AddTravel = () => {
       .then((result) => {
         if (result.success) {
           const img = result.data.url;
-          const travel = {
-            name: data.name,
+          const content = {
+            place: data.name,
             img: img,
             description: data.description,
           };
-          dispatch(createTravelData(travel));
+          dispatch(createContentData(content));
         }
       });
   };
@@ -48,7 +48,7 @@ const AddTravel = () => {
               htmlFor="name"
               className="form-label inline-block mb-2 text-gray-700 font-[montserrat] font-semibold"
             >
-              Travel Name
+              Content Name
             </label>{" "}
             <br />
             <input
@@ -62,7 +62,7 @@ const AddTravel = () => {
               htmlFor="avatar"
               className="form-label inline-block mb-2 text-gray-700 font-[montserrat] font-semibold"
             >
-              Upload Your Travel Image
+              Upload Your Content Image
             </label>
             <input
               type="file"
@@ -77,7 +77,7 @@ const AddTravel = () => {
             htmlFor="description"
             className="form-label inline-block mb-2 text-gray-700 mt-5 font-[montserrat] font-semibold"
           >
-            Travel Description
+            Content Description
           </label>
           <textarea
             {...register("description", { required: true })}
@@ -97,4 +97,4 @@ const AddTravel = () => {
   );
 };
 
-export default AddTravel;
+export default AddContent;

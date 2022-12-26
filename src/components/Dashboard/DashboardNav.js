@@ -60,10 +60,10 @@ const DashboardNav = () => {
           </div>
         </div>
       </nav>
-      {/* Manu */}
+      {/*side bar Manu */}
       <div className="flex flex-row gapx-3">
         <div
-          className={`${width ? "w-20" : " w-80"} h-[calc(100vh-100px)] ${
+          className={`${width ? "w-20" : " w-80"} h-[100vh] ${
             toggle ? "block" : "hidden"
           } block border-r bg-[#34495e] `}
           id="navbar-dropdown"
@@ -87,7 +87,7 @@ const DashboardNav = () => {
             </li>
             <li>
               <Link
-                to={"/dashboard/productlist"}
+                to={"/dashboard/contents"}
                 className="block py-2 pl-3 pr-4 text-white  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 <div className="py-2 px-2 flex flex-row items-center gap-x-2 bg-transparent  hover:bg-black rounded-md ease-in-out duration-150">
@@ -99,14 +99,14 @@ const DashboardNav = () => {
                       width ? "hidden" : "visible"
                     } text-[18px] font-normal`}
                   >
-                    Product List
+                    Contents
                   </span>
                 </div>
               </Link>
             </li>
             <li>
               <Link
-                to={"/dashboard/addproduct"}
+                to={"/dashboard/add-content"}
                 className="block py-2 pl-3 pr-4 text-white  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 <div className="py-2 px-2 flex flex-row justify-center md:justify-start items-center gap-x-2 bg-transparent  hover:bg-black rounded-md ease-in-out duration-150">
@@ -118,7 +118,7 @@ const DashboardNav = () => {
                       width ? "hidden" : "visible"
                     } text-[18px] font-normal`}
                   >
-                    Product Add
+                    Add Content
                   </span>
                 </div>
               </Link>

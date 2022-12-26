@@ -1,19 +1,20 @@
-import { createTravel } from "../../actions/travelAction";
+import { createContent } from "../../actions/contentActions";
 
-const createTravelData = (travel) => {
+
+const createContentData = (content) => {
   return async (dispatch, getState) => {
     const res = await fetch(`http://localhost:5000/place`, {
       method: "POST",
-      body: JSON.stringify(travel),
+      body: JSON.stringify(content),
       headers: {
         "Content-type": "application/json",
       },
     });
     const data = res.json();
     if (data.acknowledged) {
-      dispatch(createTravel({ _id: data.insertedId, ...travel }));
+      dispatch(createContent({ _id: data.insertedId, ...content }));
     }
   };
 };
 
-export default createTravelData;
+export default createContentData;

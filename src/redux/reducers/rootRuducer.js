@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import travelReducer from "./travelReducer";
+import contentReducer from "./contentReducer";
 
 const rootRudcer = combineReducers({
-  travel: travelReducer,
+  contents:contentReducer,
 });
 
 export default rootRudcer;

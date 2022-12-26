@@ -1,3 +1,4 @@
-export const LOAD_TRAVEL = "LOAD_TRAVEL";
-export const TRAVEL_DETAILS = "TRAVEL_DETAILS";
-export const CREATE_DATA = "CREATE_DATA";
+export const GET_CONTENT = "GET_CONTENT";
+export const CONTENT_DETAILS = "CONTENT_DETAILS";
+export const ADD_CONTENT = "ADD_CONTENT";
+export const DELETE_CONTENT = "DELETE_CONTENT";

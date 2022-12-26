@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import AddTravel from "../components/Dashboard/AddTravel";
+import AddContent from "../components/Dashboard/AddContent";
 import Dashboard from "../components/Dashboard/Dashboard";
-import ProductList from "../components/Dashboard/ProductList";
-import TravelUpdate from "../components/Dashboard/TravelUpdate";
+import ContentList from "../components/Dashboard/ContentList";
 import Home from "../pages/main/Home";
-import TravelDetails from "../pages/main/TravelDetails";
+import ContentUpdate from "../components/Dashboard/ContentUpdate";
+import ContentDetails from "../pages/main/ContentDetails";
 
 const routes = createBrowserRouter([
   {
@@ -12,29 +12,28 @@ const routes = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "travel-places/:placeId",
-    element: <TravelDetails />,
+    path: "contents/:content_id",
+    element: <ContentDetails />,
   },
-  ,
   {
     path: "/dashboard",
     element: <Dashboard />,
     children: [
       {
         path: "/dashboard",
-        element: <AddTravel />,
+        element: <AddContent />,
       },
       {
-        path: "addproduct",
-        element: <AddTravel />,
+        path: "add-content",
+        element: <AddContent />,
       },
       {
-        path: "productlist",
-        element: <ProductList />,
+        path: "contents",
+        element: <ContentList />,
       },
       {
-        path: "product-update/:listTravelId",
-        element: <TravelUpdate />,
+        path: "contents/:contentId",
+        element: <ContentUpdate />,
       },
     ],
   },
