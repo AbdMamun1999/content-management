@@ -24,11 +24,12 @@ export const deleteContent = (id) => {
   return { type: DELETE_CONTENT, payload: id };
 };
 
+
+// Modals
 export const openDeleteModal = (data) => {
   return { type: OPEN_DELETE_MODAL, payload: data };
 };
 
-export const openUpdatePage = data =>{
-  return {type:OPEN_UPDATE_PAGE,payload:data}
-}
-
+export const openUpdatePage = (data) => {
+  return { type: OPEN_UPDATE_PAGE, payload: data };
+};

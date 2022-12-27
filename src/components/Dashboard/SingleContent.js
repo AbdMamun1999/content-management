@@ -61,9 +61,9 @@ const SingleContent = ({ content }) => {
       {updatePage && (
         <ContentUpdate updatePage={updatePage} content={content} />
       )}
-      {deleteContent && (
+      {/* {deleteContent && (
         <DeleteModal deleteContent={deleteContent} content={content} />
-      )}
+      )} */}
     </>
   );
 };
