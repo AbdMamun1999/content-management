@@ -1,4 +1,4 @@
-import { deleteContent } from "../../actions/contentActions";
+import { deleteContent, openDeleteModal } from "../../actions/contentActions";
 
 const deleteContentById = (id) => {
   return async (dispatch, getState) => {
@@ -9,6 +9,7 @@ const deleteContentById = (id) => {
       .then((data) => {
         if (data.acknowledged) {
           dispatch(deleteContent(id));
+          dispatch(openDeleteModal(false));
         }
       });
   };

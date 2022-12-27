@@ -1,8 +1,11 @@
 import {
   ADD_CONTENT,
+  CLOSE_DELETE_MODAL,
   CONTENT_DETAILS,
   DELETE_CONTENT,
   GET_CONTENT,
+  OPEN_DELETE_MODAL,
+  OPEN_UPDATE_PAGE,
 } from "../actionTypes/actionTypes";
 
 export const getContents = (data) => {
@@ -20,3 +23,12 @@ export const createContent = (data) => {
 export const deleteContent = (id) => {
   return { type: DELETE_CONTENT, payload: id };
 };
+
+export const openDeleteModal = (data) => {
+  return { type: OPEN_DELETE_MODAL, payload: data };
+};
+
+export const openUpdatePage = data =>{
+  return {type:OPEN_UPDATE_PAGE,payload:data}
+}
+

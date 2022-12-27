@@ -89,7 +89,7 @@ const AddContent = () => {
           <input
             type="submit"
             value="Submit"
-            className=" px-3 py-1 uppercase font-semibold bg-[#34495e] text-white mt-5 rounded"
+            className=" px-3 py-1 uppercase font-semibold bg-[#000] text-white mt-5 rounded"
           />
         </div>
       </div>
