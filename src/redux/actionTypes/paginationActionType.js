@@ -1,0 +1,4 @@
+export const SET_TOTAL_PAGE = "SET_TOTAL_PAGE";
+export const SET_CURRENT_PAGE = "SET_CURRENT_PAGE";
+export const SET_PREVIOUS_PAGE = "SET_PREVIOUS_PAGE";
+export const SET_NEXT_PAGE = "SET_NEXT_PAGE";

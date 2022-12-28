@@ -11,7 +11,7 @@ import {
 const initialState = {
   contents: [],
   content: {},
-  count: {},
+  count: 0,
   deleteContent: false,
   updatePage: false,
 };
@@ -21,7 +21,7 @@ const contentReducer = (state = initialState, action) => {
     case GET_CONTENT:
       return {
         ...state,
-        count: { count: action.payload.count },
+        count: action.payload.count,
         contents: action.payload.data,
       };
     case CONTENT_DETAILS:

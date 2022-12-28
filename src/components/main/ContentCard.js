@@ -1,11 +1,12 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const ContentCard = ({ content }) => {
+const ContentCard = ({ content, index }) => {
   const navigate = useNavigate();
   return (
     <div className="mt-14">
       <div className="w-[55%] mx-auto">
+        {index + 1}
         <div className="w-[100%] overflow-hidden">
           <Link to={`contents/${content._id}`}>
             <img

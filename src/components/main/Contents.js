@@ -5,18 +5,21 @@ import ContentCard from "./ContentCard";
 
 const Contents = () => {
   const contents = useSelector((state) => state.contents.contents);
+  const size = useSelector((state) => state.pagination.size);
+  const page = useSelector((state) => state.pagination.page);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getContentsLoad());
-  }, []);
+    dispatch(getContentsLoad(page, size));
+  }, [page]);
 
+
+  console.log(page,size)
   return (
     <div className="mb-10">
-      {contents.map((content) => (
-        <ContentCard key={content._id} content={content}/>
+      {contents.map((content,index) => (
+        <ContentCard key={content._id} content={content} index={index}/>
       ))}
-     
     </div>
   );
 };
