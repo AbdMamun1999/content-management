@@ -1,16 +1,18 @@
 .swiper {
   width: 100%;
-  height: 80vh;
-  background: #000;
+  height: 22vh;
+  background: #f6edfa;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 
 .swiper-slide {
-  width: 100%;
+  /* border: 2px solid black; */
   height: 100%;
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: transparent;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -30,8 +32,20 @@
 
 .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
+  margin-left: 10px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+  object-fit: cover;
+}
+
+.swiper-slide img:hover {
+  display: block;
+  margin-left: 0;
   object-fit: cover;
 }
 
@@ -48,3 +62,5 @@
   font-weight: bold;
   
 }
+
+

@@ -14,9 +14,9 @@ const Contents = () => {
   }, [page]);
 
 
-  console.log(page,size)
+
   return (
-    <div className="mb-10">
+    <div className="mb-10 lg:col-span-2">
       {contents.map((content,index) => (
         <ContentCard key={content._id} content={content} index={index}/>
       ))}

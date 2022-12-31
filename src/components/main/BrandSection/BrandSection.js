@@ -15,41 +15,112 @@ import three from "../../../images/aerial-view-of-people-on-beach-4253835-2-scal
 
 const BrandSection = () => {
   const images = [
-    { _id: 1, img: one },
-    { _id: 2, img: two },
-    { _id: 3, img: three },
+    {
+      _id: 1,
+      img: one,
+      title: "How lovely yellow is! It stands for the sun",
+      tag: "sport",
+    },
+    {
+      _id: 2,
+      img: two,
+      title: "Plan your work and work your plan",
+      tag: "sport",
+    },
+    {
+      _id: 4,
+      img: three,
+      title: "How lovely yellow is! It stands for the sun",
+      tag: "sport",
+    },
+    {
+      _id: 5,
+      img: three,
+      title: "How lovely yellow is! It stands for the sun",
+      tag: "sport",
+    },
+    {
+      _id: 6,
+      img: three,
+      title: "How lovely yellow is! It stands for the sun",
+      tag: "sport",
+    },
+    {
+      _id: 7,
+      img: three,
+      title: "How lovely yellow is! It stands for the sun",
+      tag: "sport",
+    },
+    {
+      _id: 8,
+      img: three,
+      title: "How lovely yellow is! It stands for the sun",
+      tag: "sport",
+    },
+    {
+      _id: 9,
+      img: three,
+      title: "How lovely yellow is! It stands for the sun",
+      tag: "sport",
+    },
   ];
 
   return (
     <>
       <Swiper
         grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={1}
+        // slidesPerView={4}
         spaceBetween={30}
+        breakpoints={{
+          // when window width is <= 1024px
+          1200:{
+            slidesPerView: 4,
+            spaceBetweenSlides: 30,
+          },
+          992: {
+            
+            slidesPerView: 3,
+            spaceBetweenSlides: 50,
+          },
+          // when window width is <= 768px
+          768: {
+           
+            slidesPerView: 2,
+            spaceBetweenSlides: 100,
+          },
+          600:{
+            slidesPerView: 1,
+            spaceBetweenSlides: 120,
+          }
+        }}
         autoplay={{
-          delay: 3000,
+          delay: 10000,
           disableOnInteraction: false,
         }}
+        loop={true}
         pagination={{
           clickable: true,
         }}
-        navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
         {images.map((image, index) => (
-          <SwiperSlide key={index+100}>
-            <div key={image._id}
-              className="w-[100%] h-[100%]"
-              style={{
-                backgroundImage: `url(${image.img})`,
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat ",
-                padding: "0px !important",
-              }}
-            ></div>
+          <SwiperSlide key={index + 100}>
+            <div className="flex flex-row items-center gap-x-5">
+              <div className="relative w-[100px] h-[100px] ml-6 p-0 rounded-[50%]">
+                <figure className="w-[100px] h-[100px] m-0 p-0 overflow-hidden  rounded-[50%]">
+                  <img className="" src={image.img} alt="" />
+                </figure>
+              </div>
+              <div>
+                <div>
+                  <p className="text-left font-bold capitalize">{image.tag}</p>
+                </div>
+                <div className="text-justify text-[15px] font-bold">
+                  {image.title}
+                </div>
+              </div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

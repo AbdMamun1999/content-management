@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
 const ContentCard = ({ content, index }) => {
   const navigate = useNavigate();
+
   return (
-    <div className="mt-14">
-      <div className="w-[55%] mx-auto">
-        {index + 1}
+    <div className="">
+      <div className="mx-auto">
+       
         <div className="w-[100%] overflow-hidden">
           <Link to={`contents/${content._id}`}>
             <img
               src={content.img}
               alt=""
               className="hover:scale-110 duration-300 ease-in-out"
-              style={{ objectFit: "cover", width: "100%", height: "500px" }}
+              style={{ objectFit: "cover", width: "100%", height: "" }}
             />
           </Link>
         </div>
