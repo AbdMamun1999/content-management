@@ -4,7 +4,7 @@ import DashboardNav from './DashboardNav';
 
 const Dashboard = () => {
     return (
-        <div className='bg-[#34495e]'>
+        <div className='bg-[#f5f7fa]'>
             <DashboardNav/>
         </div>
     );

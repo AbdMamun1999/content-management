@@ -29,10 +29,14 @@ const SingleContent = ({ content }) => {
           scope="row"
           className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
         >
-          {content.place}
+          {content.title}
         </th>
-        <td className="py-4 px-6">Sliver</td>
-        <td className="py-4 px-6">Laptop</td>
+        <td className="py-4 px-6 text-sm font-semibold capitalize">{content.categories}</td>
+        <td className="py-4 px-6 flex flex-row gap-x-2 text-sm items-center">
+          {content.tags.map((tag) => (
+            <span className="border-2 px-2 capitalize rounded">{tag}</span>
+          ))}
+        </td>
         <td className="py-4 px-6">
           <button
             onClick={() => dispatch(openUpdatePage(true))}

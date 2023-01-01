@@ -8,13 +8,13 @@ import {
 
 const Pagination = () => {
   const totalContent = useSelector((state) => state.contents.count);
-  const totalPage = Math.ceil(totalContent / 5);
+  const totalPage = Math.ceil(totalContent / 10);
 
   const dispatch = useDispatch();
 
   return (
     <nav
-      className="flex justify-center items-center mb-14"
+      className="flex justify-center items-center"
       aria-label="Page navigation example"
     >
       <ul className="inline-flex -space-x-px">

@@ -22,7 +22,7 @@ const ContentCard = ({ content, index }) => {
         <div>
           <Link to={`contents/${content._id}`}>
             <h1 className="text-5xl font-semibold my-3 font-[montserrat] hover:text-[#f0473c] duration-300 ease-in-out">
-              {content.place}
+              {content.title}
             </h1>
           </Link>
           <p className="text-xl font-[montserrat]">

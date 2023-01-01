@@ -2,10 +2,11 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { firstUploads } from "../../redux/actions/filterActions";
 
+
 const SortMenu = () => {
   const dispatch = useDispatch();
   const sorts = useSelector((state) => state.filter.sorts);
-  console.log(sorts);
+
   return (
     <nav>
       <div>

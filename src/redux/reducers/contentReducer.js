@@ -4,8 +4,10 @@ import {
   CONTENT_DETAILS,
   DELETE_CONTENT,
   GET_CONTENT,
+  IS_UPLOAD,
   OPEN_DELETE_MODAL,
   OPEN_UPDATE_PAGE,
+  SET_DATE_CREATE_CONTENT,
 } from "../actionTypes/actionTypes";
 
 const initialState = {
@@ -14,6 +16,8 @@ const initialState = {
   count: 0,
   deleteContent: false,
   updatePage: false,
+  date: new Date(),
+  isUpload: false,
 };
 
 const contentReducer = (state = initialState, action) => {
@@ -53,6 +57,18 @@ const contentReducer = (state = initialState, action) => {
       return {
         ...state,
         updatePage: action.payload,
+      };
+
+    case SET_DATE_CREATE_CONTENT:
+      return {
+        ...state,
+        date: action.payload,
+      };
+
+    case IS_UPLOAD:
+      return {
+        ...state,
+        isUpload: action.payload,
       };
 
     default:

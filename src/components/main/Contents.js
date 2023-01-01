@@ -4,22 +4,26 @@ import getContentsLoad from "../../redux/thunk/content/getContents";
 import ContentCard from "./ContentCard";
 
 const Contents = () => {
+  const [visible, setVisible] = useState(5);
   const contents = useSelector((state) => state.contents.contents);
-  const size = useSelector((state) => state.pagination.size);
-  const page = useSelector((state) => state.pagination.page);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getContentsLoad(page, size));
-  }, [page]);
+    dispatch(getContentsLoad());
+  }, []);
 
-
+  const showMoreItem = () => {
+    setVisible((previous) => previous + 3);
+  };
 
   return (
     <div className="mb-10 lg:col-span-2">
-      {contents.map((content,index) => (
-        <ContentCard key={content._id} content={content} index={index}/>
+      {contents.slice(0, visible).map((content, index) => (
+        <ContentCard key={content._id} content={content} index={index} />
       ))}
+      <button onClick={() => showMoreItem()} type="buttn">
+        Load More
+      </button>
     </div>
   );
 };

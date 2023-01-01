@@ -61,7 +61,7 @@ const DashboardNav = () => {
         </div>
       </nav>
       {/*side bar Manu */}
-      <div className="flex flex-row gapx-3">
+      <div className="flex flex-row ">
         <div
           className={`${width ? "w-20" : " w-80"} h-[100vh] ${
             toggle ? "block" : "hidden"

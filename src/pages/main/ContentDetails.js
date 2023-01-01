@@ -9,14 +9,14 @@ const ContentDetails = () => {
   const { content_id } = useParams();
   const content = useSelector((state) => state.contents.content);
   const dispatch = useDispatch();
-  const date = new Date().toLocaleTimeString();
+  const time = new Date().toLocaleTimeString();
 
   useEffect(() => {
     dispatch(getContentById(content_id));
-    dispatch(addHistory({ content_id, date }));
+    dispatch(addHistory({ content_id, time }));
   }, []);
 
-  console.log(date);
+
 
   return (
     <div className="bg-[#f1f1f1]">

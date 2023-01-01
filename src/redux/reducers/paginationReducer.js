@@ -7,7 +7,7 @@ import {
 
 const initialState = {
   page: 0,
-  size: 5,
+  size: 10,
   totalPage: 0,
 };
 
@@ -23,7 +23,7 @@ const paginationReducer = (state = initialState, action) => {
       if (state.page > 0) {
         return {
           ...state,
-          size: 5,
+          size: 10,
           page: state.page - 1,
         };
       } else {
@@ -32,20 +32,20 @@ const paginationReducer = (state = initialState, action) => {
     case SET_CURRENT_PAGE:
       return {
         state,
-        size: 5,
+        size: 10,
         page: action.payload,
       };
     case SET_NEXT_PAGE:
       if (state.page < 5) {
         return {
           ...state,
-          size: 5,
+          size: 10,
           page: state.page + 1,
         };
       } else {
         return {
           ...state,
-          size: 5,
+          size: 10,
           page: state.totalPage,
         };
       }

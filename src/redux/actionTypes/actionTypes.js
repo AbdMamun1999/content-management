@@ -2,6 +2,9 @@ export const GET_CONTENT = "GET_CONTENT";
 export const CONTENT_DETAILS = "CONTENT_DETAILS";
 export const ADD_CONTENT = "ADD_CONTENT";
 export const DELETE_CONTENT = "DELETE_CONTENT";
+export const SET_DATE_CREATE_CONTENT = "SET_DATE_CREATE_CONTENT"
 // Modal
 export const OPEN_DELETE_MODAL = "OPEN_DELETE_MODAL";
 export const OPEN_UPDATE_PAGE = "OPEN_UPDATE_PAGE";
+// 
+export const IS_UPLOAD = "IS_UPLOAD"

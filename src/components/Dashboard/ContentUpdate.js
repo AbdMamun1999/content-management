@@ -24,37 +24,37 @@ const ContentUpdate = ({ updatePage }) => {
             <div className="px-10">
               <div className="flex flex-row justify-between">
                 <div>
-                  <label for="name">Name</label>
+                  <label htmlFor="name">Name</label>
                   <br />
                   <input type="text" name="name" className="rounded" />
                 </div>
                 <div>
-                  <label for="name">Name</label>
+                  <label htmlFor="name">Name</label>
                   <br />
                   <input type="text" name="" className="rounded" />
                 </div>
               </div>
               <div className="flex flex-row justify-between">
                 <div>
-                  <label for="name">Name</label>
+                  <label htmlFor="name">Name</label>
                   <br />
                   <input type="text" name="name" className="rounded" />
                 </div>
                 <div>
-                  <label for="name">Name</label>
+                  <label htmlFor="name">Name</label>
                   <br />
                   <input type="text" name="" className="rounded" />
                 </div>
               </div>
               <div>
-                <label for="description">Content Eescription</label>
+                <label htmlFor="description">Content Eescription</label>
                 <br />
                 <textarea rows="" cols="" className="w-full rounded"></textarea>
               </div>
 
               <div className="flex items-center justify-center w-full">
                 <label
-                  for="dropzone-file"
+                  htmlFor="dropzone-file"
                   className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
                 >
                   <div className="flex flex-col items-center justify-center">
